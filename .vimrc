@@ -29,3 +29,13 @@ set mouse=a
 
 " Increase display by telling to vim that TTY is fast
 set ttyfast
+
+" Netrw settings
+let g:netrw_banner = 1
+let g:netrw_browse_split = 3
+let g:netrw_winsize = 25
+let g:netrw_altv = 1
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
