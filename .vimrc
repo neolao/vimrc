@@ -21,6 +21,10 @@ if has("syntax")
     syntax on
 endif
 
+" Indent
+set autoindent
+set smartindent
+
 " Swap files
 set noswapfile
 
