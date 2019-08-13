@@ -21,12 +21,16 @@ if has("syntax")
     syntax on
 endif
 
+" Swap files
+set directory=~/.vim-swap/
+
 " Display status line
 set laststatus=2
 
 " Status line content
 " File path
 set statusline=
+set statusline+=%#LineNr#
 set statusline+=\ %f
 
 " Deactivate wrapping
