@@ -45,3 +45,35 @@ augroup END
 " Shortcut Tabs
 map <tab> :tabnext<cr>
 map <S-tab> :tabprevious<cr>
+
+" Shortcut Select all
+map <C-a> ggVG
+imap <C-a> <Esc><C-a>
+vmap <C-a> <Esc><C-a>
+
+" Shortcut Duplicate lines
+map <silent> <C-k> :.copy .<cr>
+imap <C-k> <Esc><C-k>:startinsert<cr>
+vmap <silent> <C-i> :copy '><cr>gv
+vmap <silent> <C-k> :copy '<-1<cr>gv
+
+" Shortcut Move lines
+map <silent> <C-u> :.move .-2<cr>
+imap <C-u> <Esc><C-u>:startinsert<cr>
+map <silent> <C-j> :.move .+1<cr>
+imap <C-j> <Esc><C-j>:startinsert<cr>
+vmap <silent> <C-u> :move '<-2<cr>gv
+vmap <silent> <C-j> :move '>+1<cr>gv
+
+" Shortcut Delete lines
+map <silent> <C-d> :delete<cr>
+imap <C-d> <Esc><C-d>:startinsert<cr>
+
+" Shortcut Move cursor
+imap <C-w> <Esc><right>wi
+imap <C-b> <Esc>bi
+
+" Shortcut Open sidebar
+map <C-e> :Vexplore<cr>
+imap <C-e> <Esc> :Vexplore<cr>i
+vmap <C-e> <Esc> <plug>NERDTreeTabsToggle<cr>
