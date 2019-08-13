@@ -1,0 +1,2 @@
+# vimrc
+Only .vimrc file
