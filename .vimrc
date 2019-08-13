@@ -25,12 +25,9 @@ endif
 set laststatus=2
 
 " Status line content
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
+" File path
 set statusline=
-set statusline+=%{StatuslineGit()}
+set statusline+=\ %f
 
 " Deactivate wrapping
 set nowrap
