@@ -28,10 +28,16 @@ set noswapfile
 set laststatus=2
 
 " Status line content
-" File path
+" File path, encoding, line:column, progression
 set statusline=
-set statusline+=%#LineNr#
-set statusline+=\ %f
+set statusline+=\ %f\ 
+set statusline+=%#CursorColumn#
+set statusline+=%y
+set statusline+=%=
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %l/%L:%c
+set statusline+=\ %p%%
+set statusline+=\ 
 
 " Deactivate wrapping
 set nowrap
