@@ -22,7 +22,7 @@ if has("syntax")
 endif
 
 " Swap files
-set directory=~/.vim-swap/
+set noswapfile
 
 " Display status line
 set laststatus=2
