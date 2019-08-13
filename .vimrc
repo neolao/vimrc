@@ -1,3 +1,6 @@
+" Theme
+colo pablo
+
 " Encoding
 scriptencoding utf-8
 set enc=utf-8
