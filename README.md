@@ -3,7 +3,7 @@ Simple .vimrc
 
 Install with the following command:
 ```bash
-curl http://vimrc.neolao.com/vimrc -o ~/.vimrc
+curl https://vimrc.neolao.com/vimrc -o ~/.vimrc
 ```
 
 | Shortcut          | Description        |
