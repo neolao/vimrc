@@ -34,8 +34,8 @@ set laststatus=2
 " Status line content
 " File path, modified flag, type, readonly, encoding, line:column, progression
 set statusline=
-set statusline+=\ %f\ 
-set statusline+=%#CursorColumn#
+set statusline+=\ %f
+set statusline+=\ %#CursorColumn#
 set statusline+=%m
 set statusline+=%y
 set statusline+=%r
@@ -43,7 +43,7 @@ set statusline+=%=
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\ %l/%L:%c
 set statusline+=\ %p%%
-set statusline+=\ 
+set statusline+=\
 
 " Deactivate wrapping
 set nowrap
@@ -60,6 +60,19 @@ let g:netrw_browse_split = 3
 let g:netrw_winsize = 25
 let g:netrw_altv = 1
 let g:netrw_liststyle = 3
+
+" Toggle Netrw
+let g:netrw_open = 0
+function! ToggleNetrw()
+    if g:netrw_open
+        let g:netrw_open = 0
+        silent Lexplore
+    else
+        let g:netrw_open = 1
+        silent Lexplore
+        wincmd p
+    endif
+endfunction
 
 " Shortcut Tabs
 map <tab> :tabnext<cr>
@@ -92,7 +105,7 @@ imap <C-d> <Esc><C-d>:startinsert<cr>
 imap <C-w> <Esc><right>wi
 imap <C-b> <Esc>bi
 
-" Shortcut Open sidebar
-map <C-e> :Vexplore<cr>
-imap <C-e> <Esc> :Vexplore<cr>i
-vmap <C-e> <Esc> <plug>NERDTreeTabsToggle<cr>
+" Shortcut Toggle explorer
+map <C-e> :call ToggleNetrw() <CR>
+imap <C-e> :call ToggleNetrw() <CR>
+vmap <C-e> :call ToggleNetrw() <CR>
