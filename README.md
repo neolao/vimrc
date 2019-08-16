@@ -14,4 +14,4 @@ curl https://vimrc.neolao.com/vimrc -o ~/.vimrc
 | `Ctrl` + `j`      | Move down lines    |
 | `Ctrl` + `u`      | Move up lines      |
 | `Ctrl` + `d`      | Delete lines       |
-| `Ctrl` + `e`      | Open explorer      |
+| `Ctrl` + `e`      | Toggle explorer    |
