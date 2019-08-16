@@ -6,6 +6,10 @@ Install with the following command:
 curl https://vimrc.neolao.com/vimrc -o ~/.vimrc
 ```
 
+```bash
+wget https://vimrc.neolao.com/vimrc -O ~/.vimrc
+```
+
 | Shortcut          | Description        |
 | ----------------- | ------------------ |
 | `Tab`             | Go to next tab     |
